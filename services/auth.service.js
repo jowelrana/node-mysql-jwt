@@ -14,7 +14,9 @@ exports.findUserByEmail = (email) => {
 }
 
 exports.findUserById = (id) => {
-    return UserModel.findByPk(id);
+    return UserModel.findByPk(id, {
+        attributes: { exclude: ['password'] }
+      });
 }
 
 exports.logoutUser = (token, exp) => {

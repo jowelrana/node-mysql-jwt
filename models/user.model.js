@@ -12,6 +12,7 @@ const User = sequelize.define('User', {
         type: DataTypes.STRING 
     }
 }, {
+    tableName: 'users',
     createdAt: 'created_at',
     updatedAt: 'updated_at'
 }); 
